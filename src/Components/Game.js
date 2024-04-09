@@ -1,20 +1,35 @@
-import React from 'react';
+
 import './Game.css';
 import Monster from './Monster';
 import PlayerList from './PlayerList';
+import { useSelector } from 'react-redux';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <Monster />
-        <br></br>
-        <section className="container-fluid">
-          <PlayerList />
-        </section >
-      </div>
-    )
-  }
+const App = () => {
+
+  const gameOver = useSelector(state => state.fight.gameOver);
+  const victory = useSelector(state => state.fight.victory);
+
+  return (
+    <div className="App">
+      {gameOver ? (
+        <div>
+          {victory ? (
+            <h1 className='text-white'>Victoire !</h1>
+          ) : (
+            <h1 className='text-white'>Défaite !</h1>
+          )}
+        </div>
+      ) : (
+        <div>
+          <Monster />
+          <br></br>
+          <section className="container-fluid">
+            <PlayerList/>
+          </section>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default App;
