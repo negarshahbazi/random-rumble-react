@@ -5,27 +5,25 @@ import JackImage from "../../Jack.gif";
 import JessyImage from "../../Jessy.gif";
 import JennyImage from "../../Jenny.gif";
 import NegarImage from "../../Negar.gif";
+import AttackImage from "../../giphy (1).gif";
+import DeadMonsterImage from "../../giphy (2).gif"; 
+import Failed from "../../failed.gif"; 
+
 
 const initialState = {
     // TODO : Compléter 'players' et 'monster'
     players: [
-        { name: "John", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1, played: false, src: JohnImage },
-        { name: "Jack", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2, played: false , src: JackImage},
-        { name: "Jessy", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3, played: false , src: JessyImage},
-        { name: "Jenny", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 4, played: false , src:JennyImage},
-        { name: "Negar", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 5, played: false , src: NegarImage}
+        { name: "John", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 1, played: false, src: JohnImage, attack: AttackImage, winner: DeadMonsterImage,failed: Failed },
+        { name: "Jack", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 2, played: false, src: JackImage, attack: AttackImage, winner: DeadMonsterImage, failed: Failed  },
+        { name: "Jessy", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 3, played: false, src: JessyImage, attack: AttackImage, winner: DeadMonsterImage,failed: Failed },
+        { name: "Negar", pv: 100, pvMax: 100, mana: 30, manaMax: 30, id: 5, played: false, src: NegarImage, attack: AttackImage, winner: DeadMonsterImage, failed: Failed }
     ],
 
     lastPlayedPlayerId: [], // Ajouter la propriété pour suivre l'ID du joueur qui a joué en dernier
-    monster: { pv: 800, pvMax: 800 },
+    monster: { pv: 200, pvMax: 200 },
     gameOver: false, // Ajout de la propriété pour indiquer si la partie est terminée
     victory: false, // Ajout de la propriété pour indiquer si la victoire est obtenue
-    // capacity: {
-    //     healAmount: 20,
-    //     manaCost: 20,
-    //     manaAmout: 10,
-    //     healCost: 10,
-    // }
+   
 };
 
 export const fightSlice = createSlice({
@@ -46,8 +44,8 @@ export const fightSlice = createSlice({
                 player.played = true;
                 // console.log(player.id);
                 state.lastPlayedPlayerId.push(player.id);
-
-                console.log(state.lastPlayedPlayerId);
+                state.lastAttackingPlayerId = player.id; 
+                // console.log(state.lastPlayedPlayerId);
             }
             // Vérifier si tous les joueurs ont joué
             if (state.lastPlayedPlayerId.length === state.players.length) {

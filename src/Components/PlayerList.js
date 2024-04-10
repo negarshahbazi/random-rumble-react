@@ -13,7 +13,7 @@ function PlayerList() {
     };
 
     return (
-        <div className='d-flex justify-content-center align-items-center'>
+        <div className='row d-flex justify-content-center align-items-center'>
             {displayPlayers()}
         </div>
     );
