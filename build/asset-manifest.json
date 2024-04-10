@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.423eebe6.css",
+    "main.js": "/static/js/main.6a839315.js",
+    "static/media/giphy.gif": "/static/media/giphy.d87bfe26f1234aba1847.gif",
+    "static/media/giphy (1).gif": "/static/media/giphy (1).bbd2ffa76dd0f115fce8.gif",
+    "static/media/Jessy.gif": "/static/media/Jessy.c0be1a42627309f7c9fa.gif",
+    "static/media/John.gif": "/static/media/John.d8318fd1df81e345042a.gif",
+    "static/media/Jack.gif": "/static/media/Jack.99e8ec5f350281b59cf2.gif",
+    "static/media/Jenny.gif": "/static/media/Jenny.dc599fb5ffab1983993b.gif",
+    "static/media/Negar.gif": "/static/media/Negar.f7fcd60c76483687f2e3.gif",
+    "static/media/giphy (2).gif": "/static/media/giphy (2).db066ae9432b91516385.gif",
+    "index.html": "/index.html",
+    "main.423eebe6.css.map": "/static/css/main.423eebe6.css.map",
+    "main.6a839315.js.map": "/static/js/main.6a839315.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.423eebe6.css",
+    "static/js/main.6a839315.js"
+  ]
+}
