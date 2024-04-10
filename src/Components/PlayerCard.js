@@ -19,7 +19,7 @@ function PlayerCard({ player }) {
     console.log(player);
 
     return (
-        <div key={player.id} className="card  col-sm-6 col-lg-2">
+        <div key={player.id} className="card  col-sm-6 col-lg-2 "style={{ fontFamily: 'Chilanka' }}>
             <h5 className="card-title">{player.name}</h5>
 
             {/* Utilisation d'opérateurs ternaires imbriqués pour déterminer quelle image afficher */}

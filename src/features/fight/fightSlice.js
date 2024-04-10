@@ -1,13 +1,12 @@
 
 import { createSlice } from "@reduxjs/toolkit";
-import JohnImage from "../../John.gif";
-import JackImage from "../../Jack.gif";
-import JessyImage from "../../Jessy.gif";
-import JennyImage from "../../Jenny.gif";
-import NegarImage from "../../Negar.gif";
-import AttackImage from "../../giphy (1).gif";
-import DeadMonsterImage from "../../giphy (2).gif"; 
-import Failed from "../../failed.gif"; 
+import JohnImage from "../../img/John.gif";
+import JackImage from "../../img/Jack.gif";
+import JessyImage from "../../img/Jessy.gif";
+import NegarImage from "../../img/Negar.gif";
+import AttackImage from "../../img/giphy (1).gif";
+import DeadMonsterImage from "../../img/giphy (2).gif"; 
+import Failed from "../../img/failed.gif"; 
 
 
 const initialState = {
